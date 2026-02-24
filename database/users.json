@@ -1,6 +1,10 @@
 [
   {
-    "name": "Mukul Verma",
-    "email": "mukulv072@gmail.com"
+    "email": "mukulv072@gmail.com",
+    "password": "123"
+  },
+  {
+    "email": "mukulv071@gmail.com",
+    "password": "xyz23yui"
   }
 ]
