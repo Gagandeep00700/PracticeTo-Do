@@ -76,27 +76,7 @@ position: relative;
   display: inline-block;
   padding: 10px 15px;
 }
-
-/* 1. Ensure the parent (li) is the reference point */
-nav ul li {
-  position: relative;
-  list-style: none;
-  display: inline-block;
-  padding: 10px 15px;
-}
-
-/* 2. Create the underline using the ::after pseudo-element */
-nav ul li.active::after {
-  content: "";
-  position: absolute;
-  bottom: -5px; /* Adjust this to move the line up or down */
-  left: 20%;    /* Centering the line */
-  right: 20%;
-  height: 3px;  /* Thickness of the line */
-  background-color: #ffffff; /* Use the color from your design */
-  border-radius: 2px;
-}
-
+/*
 a{
     text-decoration: none;
     color: black;
