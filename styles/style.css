@@ -1,23 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CSS RESETS */
+/* RESETTING SIZES and APPLYING FONT */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.navbar{
-    height: 50px;
-    width: 100%;
-    background-color: black;
+/* FOR BODY's RESPONSIVENESS*/
+body{
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+/* FOR IMAGE RESPONSIVENESS */
+img {
+    display: block;
+    height: auto;
+}
+
+nav{
+    height: auto;
+    min-width: 100%;
+    padding: 1rem;
+    background:linear-gradient(to right,#A9D6E5,#D4E7D0);
+    display:flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+nav .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+nav .left h1 {
+    flex-grow: 1;
+    text-align: center;
+    color: azure;
+    text-shadow: 0px 0px 10px black;
+    text-wrap: wrap;
+}
+
+nav .left img {
+    width: 25%;
+    height: auto;
+}
+
+nav .right{
+    flex-grow: 2;
+    width: 70%;
     display: flex;
     align-items: center;
 }
 
+nav .right ul{
+    width: 100%;
+    list-style-type: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+nav .right ul li{
+position: relative;
+  list-style: none;
+  display: inline-block;
+  padding: 10px 15px;
+}
 a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.5rem;
 }
 
+/*
 .right{
     margin-left: auto;
     display: flex;
@@ -31,4 +96,4 @@ a:hover{
 
 a:active{
     color: #ccc;
-}
+} */
