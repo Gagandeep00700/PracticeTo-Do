@@ -1,27 +1,31 @@
 import express from 'express'
-import path from 'path'
 import qs from 'querystring'
 import fs from 'fs'
 
 const app = express();
 
-let absPath = path.resolve("pages")
-app.use(express.static("styles"))
+app.set("view engine", "ejs");
 
+// Static CSS //
+app.use(express.static("styles"));
+
+// Home Page //
 app.get("/", (req, res) => {
-    res.sendFile(absPath + "/index.html")
+    res.render("index")
 })
 
+// About Page //
 app.get("/about", (req, res) => {
-    res.send("<h1>about page</h1>");
+    res.render("about");
 })
 
-// Sign up Logic //
 
+// Sign up Page //
 app.get("/signup", (req, res) => {
-    res.sendFile(absPath + "/signup.html");
+    res.render("signup");
 })
 
+// Sign up Logic
 app.post("/signup", (req, res) => {
     let body = ''
     req.on("data", (chunk) => {
@@ -47,12 +51,12 @@ app.post("/signup", (req, res) => {
     })
 })
 
-// Login Logic //
-
+// Login Page //
 app.get("/login", (req, res) => {
-    res.sendFile(absPath + "/login.html");
+    res.render("login")
 })
 
+// Login Logic //
 app.post("/login", (req, res) => {
     let body = ""
     req.on("data", (chunk) => {
@@ -71,6 +75,7 @@ app.post("/login", (req, res) => {
 
             if (!user) {
                 console.log("User not found");
+                return res.send("<h1>User not found</h1>")
             }
             else {
                 if (user.password === data.password) {
@@ -84,11 +89,13 @@ app.post("/login", (req, res) => {
     })
 })
 
+// todo Page //
 app.get("/todo", (req, res) => {
-    res.send("<h1>todo page</h1>");
+    res.render("todo");
 })
 
+// Error Page //
 app.use((req, res) => {
-    res.status(404).sendFile(absPath + "/error.html")
+    res.status(404).render("error");
 })
 app.listen(4500);

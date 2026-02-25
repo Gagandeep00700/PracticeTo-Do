@@ -9,15 +9,7 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <a href="/" style="margin-left: 1rem;">Home</a>
-        <div class="right">
-            <a href="/todo">Todo</a>
-            <a href="/login">Login</a>
-            <a href="/signup">Signup</a>
-            <a href="/about">About</a>
-        </div>
-    </div>
+     <%- include("partials/navbar") %>
 
     <form action="/signup" method="post">
         <input type="email" name="email" placeholder="Enter your email"> <br>
