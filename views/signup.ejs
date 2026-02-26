@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/form.css">
 </head>
 
 <body>
      <%- include("partials/navbar") %>
-
+    <main>
+    <h1>Create Your Account</h1>
     <form action="/signup" method="post">
         <input type="email" name="email" placeholder="Enter your email"> <br>
         <input type="password" name="password" placeholder="Enter your password"> <br>
         <button>Signup</button>
     </form>
+    </main>
 </body>
 
 </html>

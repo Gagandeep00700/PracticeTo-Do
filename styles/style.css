@@ -14,9 +14,20 @@
 /* FOR BODY's RESPONSIVENESS*/
 body {
     min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     max-width: 100%;
 }
 
+main {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 /* FOR IMAGE RESPONSIVENESS */
 img {
     display: block;
@@ -71,18 +82,19 @@ nav .right ul {
     flex-wrap: wrap;
 }
 
-nav .right ul li {
-    position: relative;
-    list-style: none;
-    display: inline-block;
-    padding: 10px 15px;
+nav .right ul li{
+position: relative;
+  list-style: none;
+  display: inline-block;
+  padding: 10px 15px;
 }
 
-a {
+a{
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
 }
+
 
 /*
 .right{

@@ -1,0 +1,34 @@
+main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh;        */
+    background-color: #D4E3DE;
+} 
+
+/* form{
+    
+} */
+
+input {
+    background-color: aliceblue;
+    min-height: 30%;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 0rem 0.9rem;
+    border: none;
+    min-width: 100%;
+    flex-grow: 3;
+}
+
+button {
+    background:linear-gradient(to right,#8bd1e8,#b9eaaf);
+    border-radius: 10px;
+    min-height: 30%;
+    border: none;
+    margin-top: 1rem;
+    width: 100%;
+    color: white;
+    font-weight: bolder;
+}
