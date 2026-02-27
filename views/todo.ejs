@@ -10,12 +10,32 @@
 
 <body>
     <%- include("partials/navbar") %>
+    <main class="todo-main">
         <form action="/addTask" method="post">
-            <div class="todo">
-                <input type="text" name="todo"  placeholder="Enter your task">
-                <button>Add</button>
+            <h1>ADD A NEW TASK</h1>
+            <div class="add-todo">
+                <input type="text" name="todo"  placeholder="Enter your task here...">
+                <button><b>Add Task +</b></button>
             </div>
         </form>
+        <section class="all-tasks-here">
+            <h1>YOUR CURRENT TASKS</h1>
+            <div class="tasks">
+                <div class="task">
+                    <input type="radio" name="t1">
+                    <label for="t1">Finialize project proposal</label>
+                </div>
+                <div class="task">
+                    <input type="radio" name="t1">
+                    <label for="t1">Finialize project proposal</label>
+                </div>
+                <div class="task">
+                    <input type="radio" name="t1">
+                    <label for="t1">Finialize project proposal</label>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

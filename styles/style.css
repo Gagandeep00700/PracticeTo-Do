@@ -113,29 +113,84 @@ a:active{
 } */
 
 
-.todo {
-    height: 50px;
-    width: 40%;
-    margin: 1% 30%;
+.add-todo {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
-.todo input {
-    border-right: none;
-    height: 45px;
-    width: 85%;
-    padding-left: 10px;
+.add-todo input {
+    height: auto; 
+    padding:0.5rem 1rem;
     font-size: 1.2rem;
+    border: none;
+    width: 100%;
+    border-radius: 0.5rem;
 }
 
-.todo input:focus {
+.add-todo input:focus {
     outline: none;
 }
 
-.todo button {
-    height: 45px;
-    width: 15%;
-    border-left: none;
+.add-todo button {
+    height: clamp(40px,6vw,60px);
+    width: 100%;
+    padding: 0.3rem 1.5rem;
     cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    /* text-shadow: 0px 0px 10px black; */
+    background:linear-gradient(to right,#a4dff3,#b1f3a4);
+    margin-top: 5%;
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+.todo-main {
+    /* display: block; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: #DDE7E8;
+}
+
+.todo-main form {
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    border-radius: 15px;
+    max-width: 500px;
+    padding: 2rem;
+    height: clamp(250px,50%,250px);
+    width: clamp(325px,70%,400px);
+}
+
+.todo-main form h1 {
+    width: 100%;
+    font-weight: bold;
+    font-size: clamp(1.3rem,3vw,1.9rem);
+    text-align: left;
+}
+
+.todo-main .add-todo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.all-tasks-here {
+    height: clamp(250px,50%,250px);
+    display: flex;
+    flex-direction: column;   
+    width: clamp(325px,70%,400px);
+    padding: 1.2rem;
+    border-radius: 10px;
+    background-color: white;
 }
